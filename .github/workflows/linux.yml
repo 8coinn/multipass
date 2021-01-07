@@ -105,8 +105,8 @@ jobs:
       run: |
         COVERAGE_BUILD=${HOME}/build
         mkdir --parents ${COVERAGE_BUILD}
-        sg lxd -c "/snap/bin/lxc profile device add default build disk source=${COVERAGE_BUILD} path=/root/parts/multipass/build"
-        echo "::set-output name=build::${COVERAGE_BUILD}"
+        sg lxd -c "/snap/bin/lxc profile device add default build disk source=${COVERAGE_BUILD} path=/root/parts/multipass"
+        echo "::set-output name=build::${COVERAGE_BUILD}/build"
 
     - name: Build
       run: |
